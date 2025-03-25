@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+/* General styles */
+.calculator {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #393538;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #4caf50;
+  background-image: url("C:/Users/Lenovo/Documents/UID/calculator/public/a.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.display {
+  font-size: 24px;
+  background-color: #222;
+  color: #fff;
+  text-align: right;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.input {
+  font-size: 50px;
+  color: #ccc;
+}
+
+.result {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #eee;
+  color: black;
+}
+
+button:active {
+  background-color: #ccc;
+}
+
+.equal {
+  grid-column: span 4;
+  background-color: #4caf50;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Light theme */
+.light .calculator {
+  background-color: #f9f9f9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.light .display {
+  background-color: #e0e0e0;
+  color: black;
 }
+
+.light .input {
+  color: black;
+}
+
+.light .result {
+  color: black;
+}
+
+.light button {
+  background-color: #fff;
+  color: black;
+}
+
+.light .equal {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Dark theme */
+.dark .calculator {
+  background-color: #393538;
+}
+
+.dark .display {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark .input {
+  color: #ccc;
+}
+
+.dark .result {
+  color: #fff;
+}
+
+.dark button {
+  background-color: #eee;
+  color: black;
+}
+
+.dark .equal {
+  background-color: #4caf50;
+  color: white;
+}
+.theme-toggle {
+  text-align: center;
+  margin-bottom: 20px; 
+}
+
